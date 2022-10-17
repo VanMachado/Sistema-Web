@@ -20,6 +20,14 @@ namespace SalesWeb_Mvc.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["Message"] = "Your policy and privacy page!";
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Your application content info page!";
+            ViewData["Email"] = "teste@gmail.com";
             return View();
         }
 
