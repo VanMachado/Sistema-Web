@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SalesWeb_Mvc.Models;
 using System.Diagnostics;
+using SalesWeb_Mvc.Models.ViewModels;
 
 namespace SalesWeb_Mvc.Controllers
 {
@@ -26,10 +26,9 @@ namespace SalesWeb_Mvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application content info page!";
-            ViewData["Email"] = "teste@gmail.com";
+            ViewData["Message"] = "Your application content info page!";            
             return View();
-        }
+        }    
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
