@@ -3,3 +3,5 @@
 Ao longo do projeto será documentado aqui todos os desafios enfrentados, assim como as escolhas de tecnologias implementadas. 
 
 A priore, será criado um e-comerce implementando os princípios básicos de um CRUD e usando também o MySQL como banco de dados.
+
+O primeiro desafio foi em adaptar o conteúdo do curso para o framework atual, já q o .NET 2.1 já não tem mais suporte, logo alguns aspectos foram levemente diferentes do curso, como por exemplo, a conexão com o banco de dados, já que a classe "Startup.cs" foi incorporada a "Program.cs" tendo uma sintaxe diferente de integração, proporcionando explorar mais possibilidades do framework utilizado.
