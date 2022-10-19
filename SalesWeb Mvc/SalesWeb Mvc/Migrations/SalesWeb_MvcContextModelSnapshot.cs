@@ -7,7 +7,7 @@ using SalesWeb_Mvc.Data;
 
 #nullable disable
 
-namespace SalesWeb_Mvc.Migrations
+namespace SalesWebMvc.Migrations
 {
     [DbContext(typeof(SalesWeb_MvcContext))]
     partial class SalesWeb_MvcContextModelSnapshot : ModelSnapshot

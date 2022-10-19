@@ -36,19 +36,8 @@
         }
 
         public double TotalSales(DateTime init, DateTime final)
-        {
-            //Se der certo a pesquisa com LINQ pode deletar essa parte
-            //double amount = 0.0;
-
-            //foreach(SalesRecord sr in Sales)
-            //{
-            //    for (double i = 0; i < final.Subtract(init).TotalDays; i++)
-            //    {
-            //        amount += sr.Amount;
-            //    }
-            //}
-
-            return Sales.Where(sr => sr.Date > init && sr.Date < final)
+        {           
+            return Sales.Where(sr => sr.Date > init && sr.Date <= final)
                 .Sum(sr => sr.Amount);
         }
     }

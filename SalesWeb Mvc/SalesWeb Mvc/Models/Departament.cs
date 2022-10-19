@@ -22,14 +22,7 @@
         }
 
         public double TotalSales(DateTime init, DateTime final)
-        {
-            //double totalSales = 0;
-
-            //foreach (Seller seller in Sellers)
-            //{
-            //    totalSales = seller.TotalSales(init, final);
-            //}
-
+        {        
             return Sellers.Sum(seller => seller.TotalSales(init, final));
         }
     }

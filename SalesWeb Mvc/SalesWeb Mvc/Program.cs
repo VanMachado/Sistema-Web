@@ -14,6 +14,8 @@ namespace SalesWebMvc
                     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("SalesWeb_MvcContext")),
                         builder => builder.MigrationsAssembly("SalesWebMvc")));
 
+            builder.Services.AddScoped<SeedingService>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -25,6 +27,12 @@ namespace SalesWebMvc
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+            } else
+            {
+                //Como nao tem mais a classe startup eh aqui que insere o metodo para fazer inclusão no DB
+                //usando o obejeto instanciado "app"
+                app.Services.CreateScope()
+                    .ServiceProvider.GetRequiredService<SeedingService>().Seed();
             }
 
             app.UseHttpsRedirection();
