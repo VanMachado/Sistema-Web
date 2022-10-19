@@ -39,6 +39,6 @@
         {           
             return Sales.Where(sr => sr.Date > init && sr.Date <= final)
                 .Sum(sr => sr.Amount);
-        }
+        }     
     }
 }
