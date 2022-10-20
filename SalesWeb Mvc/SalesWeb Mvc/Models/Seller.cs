@@ -8,12 +8,13 @@
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
         public Departament Departament { get; set; }
+        public int DepartamentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
         {
         }
-
+     
         public Seller(int id, string name, string email, DateTime birthDate, 
             double baseSalary, Departament departament)
         {
