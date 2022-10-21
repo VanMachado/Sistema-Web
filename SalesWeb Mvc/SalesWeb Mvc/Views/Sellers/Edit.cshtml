@@ -28,8 +28,8 @@
                 <input asp-for="Seller.BaseSalary" class="form-control" />
             </div>
             <div class="form-label">
-                <label asp-for="Seller.Departament" class="control-label"></label>
-                <select asp-for="Seller.DepartamentId" asp-items="@(new SelectList(Model.Departaments,"Id",
+                <label asp-for="Seller.Department" class="control-label"></label>
+                <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments,"Id",
                     "Name"))" class="form-control"></select>
             </div>            
             <p></p>

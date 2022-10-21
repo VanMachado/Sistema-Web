@@ -2,17 +2,19 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalesWeb_Mvc.Data;
 
 #nullable disable
 
-namespace SalesWebMvc.Migrations
+namespace SalesWeb_Mvc.Migrations
 {
     [DbContext(typeof(SalesWeb_MvcContext))]
-    partial class SalesWeb_MvcContextModelSnapshot : ModelSnapshot
+    [Migration("20221021172229_UpdateName")]
+    partial class UpdateName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
