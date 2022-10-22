@@ -55,7 +55,7 @@ namespace SalesWeb_Mvc.Models
         {
             Sales.Remove(sr);
         }
-
+                
         public double TotalSales(DateTime init, DateTime final)
         {           
             return Sales.Where(sr => sr.Date > init && sr.Date <= final)

@@ -10,12 +10,12 @@ namespace SalesWeb_Mvc.Controllers
     public class SellersController : Controller
     {
         private readonly SellerService _sellerService;
-        private readonly DepartamentService _departamentService;
+        private readonly DepartamentService _departmentService;
 
         public SellersController(SellerService sellerService, DepartamentService departamentService)
         {
             _sellerService = sellerService;
-            _departamentService = departamentService;
+            _departmentService = departamentService;
         }
 
         public async Task<IActionResult> Index()
@@ -26,7 +26,7 @@ namespace SalesWeb_Mvc.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var departaments = await _departamentService.FindAllAsync();
+            var departaments = await _departmentService.FindAllAsync();
             var viewModel = new SellerFormViewModel { Departments = departaments };
             return View(viewModel);
         }
@@ -37,7 +37,7 @@ namespace SalesWeb_Mvc.Controllers
         {
             //if (!ModelState.IsValid)
             //{
-            //    var departments = await _departamentService.FindAllAsync();
+            //    var departments = await _departmentService.FindAllAsync();
             //    var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
             //    return View(viewModel);
             //}
@@ -112,7 +112,7 @@ namespace SalesWeb_Mvc.Controllers
                     , new { message = "ID not found" });
             }
 
-            List<Departament> departaments = await _departamentService.FindAllAsync();
+            List<Departament> departaments = await _departmentService.FindAllAsync();
             SellerFormViewModel viewModel = new SellerFormViewModel { Seller = obj, Departments = departaments };
             return View(viewModel);
         }
