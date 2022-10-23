@@ -14,4 +14,8 @@ Pude ver também o Entity Framework trablhar de maneira satisfatória, suprindo 
 
 Espero cada vez mais deixar o meu código mais limpo, claro e sofisticado, priorizando as boas práticas e arquitetura de software!
 
-<img title="null" src="file:///D:/workspace/Projeto-Sistema-Web/xablau-red-elmo.gif" alt="null" data-align="center">
+
+
+<p align = "center"> <img width = 450px  src ="./xablau-red-elmo.gif"> </p>
+
+
