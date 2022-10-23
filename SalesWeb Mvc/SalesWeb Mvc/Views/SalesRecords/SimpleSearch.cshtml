@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<SalesRecord>
 
 @{
-    ViewData["Title"] = "Simple Search";
+    ViewData["Title"] = "Simple Search"; 
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -12,11 +12,11 @@
             <div class="form-group">
                 <div class="form-group">
                     <label for="minDate">Min Date</label>
-                    <input class="form-control" name="minDate" value="@ViewData["minDate"]" />
+                    <input type="date" class="form-control" name="minDate" value="@ViewData["minDate"]" />
                 </div>
                 <div class="form-group">
                     <label for="maxDate">Max Date</label>
-                    <input class="form-control" name="maxDate" value=@ViewData["maxDate"] />
+                    <input type="date" class="form-control" name="maxDate" value=@ViewData["maxDate"] />
                 </div>
             </div>
             <p></p>
